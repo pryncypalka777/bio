@@ -90,12 +90,14 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            user-select: none;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
+            user-select: none;
         }
 
         .nav-link {
@@ -110,7 +112,7 @@
 
         .nav-link:hover, .nav-link.active {
             color: var(--text-primary);
-            background: rgba(77, 142, 255, 0.1);
+            background: rgba(77, 255, 211, 0.1);
         }
 
         .nav-link.active::after {
@@ -186,6 +188,7 @@
             font-weight: 700;
             justify-content: center;
             display: flex;
+            user-select: none;
         }
 
         .page-subtitle {
@@ -193,6 +196,7 @@
             font-size: 1.1rem;
             justify-content: center;
             display: flex;
+            user-select: none;
         }
 
         /* Home Page */
@@ -226,6 +230,7 @@
             overflow: hidden;
             white-space: nowrap;
             border-right: 3px solid var(--accent-blue);
+            user-select: none;
         }
 
         .typewriter-text.animated {
@@ -254,6 +259,7 @@
             font-size: 1.3rem;
             margin-bottom: 2.5rem;
             max-width: 700px;
+            user-select: none;
         }
 
         .hero-description.animated {
@@ -281,8 +287,9 @@
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(77, 142, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(77, 255, 202, 0.3);
             font-size: 1.1rem;
+            user-select: none;
         }
 
         .cta-button.animated {
@@ -292,7 +299,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(77, 142, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(77, 255, 166, 0.4);
         }
 
         /* Skills Page */
@@ -314,26 +321,27 @@
         .skill-card {
             background: var(--gradient-card);
             border-radius: 15px;
-            padding: 1.8rem;
+            padding: 1.5rem;
             transition: var(--transition);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(77, 142, 255, 0.1);
+            border: 1px solid rgba(77, 255, 211, 0.1);
             display: flex;
             flex-direction: column;
-            min-height: 220px;
+            min-height: 160px;
             position: relative;
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(77, 142, 255, 0.15);
-            border-color: rgba(77, 142, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(77, 255, 196, 0.15);
+            border-color: rgba(77, 255, 216, 0.3);
         }
 
         .skill-header {
             display: flex;
             align-items: center;
             margin-bottom: 1.2rem;
+            user-select: none;
         }
 
         .skill-icon {
@@ -350,22 +358,26 @@
 
         .skill-info {
             flex-grow: 1;
+            user-select: none;
         }
 
         .skill-name {
             font-weight: 600;
             font-size: 1.2rem;
             margin-bottom: 0.3rem;
+            user-select: none;
         }
 
         .skill-level {
             font-size: 0.9rem;
             color: var(--text-secondary);
+            
         }
 
         .skill-description {
             margin-bottom: 1rem;
             flex-grow: 1;
+            user-select: none;
         }
 
         .skill-bar-container {
@@ -386,7 +398,7 @@
             background: var(--gradient-accent);
         }
 
-        .beginner { width: 40%; }
+        .beginner { width: 35%; }
         .intermediate { width: 65%; }
         .advanced { width: 85%; }
         .expert { width: 95%; }
@@ -412,7 +424,7 @@
             overflow: hidden;
             transition: var(--transition);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(77, 142, 255, 0.1);
+            border: 1px solid rgba(77, 255, 202, 0.1);
             width: 100%;
             max-width: 320px;
             position: relative;
@@ -421,7 +433,7 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(77, 142, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(77, 255, 187, 0.15);
         }
 
         .project-image {
@@ -442,12 +454,16 @@
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
             font-weight: 600;
+            display: flex;
+            justify-content: center;
+            user-select: none;
         }
 
         .project-description {
             color: var(--text-secondary);
             margin-bottom: 1.2rem;
             font-size: 0.95rem;
+            user-select: none;
         }
 
         .project-tech {
@@ -461,15 +477,17 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+            user-select: none;
         }
 
         .tech-tag {
-            background: rgba(77, 142, 255, 0.15);
+            background: rgba(77, 255, 196, 0.15);
             color: var(--accent-light);
             padding: 0.4rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 500;
+            user-select: none;
         }
 
         /* Contact Page */
@@ -497,7 +515,7 @@
 
         .contact-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(77, 142, 255, 0.15);
+            box-shadow: 0 5px 15px rgba(77, 255, 231, 0.15);
         }
 
         .contact-icon {
@@ -515,6 +533,7 @@
         .contact-details h3 {
             margin-bottom: 0.3rem;
             font-weight: 600;
+            user-select: none;
         }
 
         .contact-details p {
@@ -535,6 +554,8 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
+            cursor: not-allowed;
+            user-select: none;
         }
 
         .form-input, .form-textarea {
@@ -546,17 +567,19 @@
             color: var(--text-primary);
             font-size: 1rem;
             transition: var(--transition);
+            cursor: not-allowed;
         }
 
         .form-input:focus, .form-textarea:focus {
             outline: none;
             border-color: var(--accent-blue);
-            background: rgba(77, 142, 255, 0.05);
+            background: rgba(77, 255, 202, 0.05);
         }
 
         .form-textarea {
             min-height: 120px;
             resize: vertical;
+            resize: none;
         }
 
         .submit-btn {
@@ -568,12 +591,13 @@
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(77, 142, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(77, 255, 166, 0.3);
+            user-select: none;
         }
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(77, 142, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(77, 255, 172, 0.4);
         }
 
         /* Responsive */
@@ -692,12 +716,14 @@
                 <div class="home-page">
                     <h1 class="hero-title">
                         <div class="typewriter-container">
-                            <div class="typewriter-text">cześć, jestem <span>pryncypalka</span></div>
+                            <div class="typewriter-text">cześć, jestem <span>pryncypalka</span>!</div>
                         </div>
                     </h1>
                     <p class="hero-description">
-                        pasjonat programowania z zamiłowaniem do tworzenia nowoczesnych rozwiązań. 
-                        specjalizuję się w tworzeniu czystego, wydajnego kodu i rozwiązywaniu złożonych problemów programistycznych.
+                        <!--pasjonat programowania z zamiłowaniem do tworzenia nowoczesnych rozwiązań. 
+                        specjalizuję się w tworzeniu czystego, wydajnego kodu i rozwiązywaniu złożonych problemów programistycznych.-->
+                        miłośnik nowoczesnego i minimalistycznego wyglądu. jestem programistą i specjalizuję się w tworzeniu
+                        czystego i wydajnego kodu.
                     </p>
                     <a href="#" class="cta-button" data-page="skills">moje umiejętności</a>
                 </div>
@@ -719,11 +745,11 @@
                                     <i class="fab fa-c"></i>
                                 </div>
                                 <div class="skill-info">
-                                    <div class="skill-name">c#</div>
+                                    <div class="skill-name">c + c#</div>
                                     <div class="skill-level">średnio zaawansowany</div>
                                 </div>
                             </div>
-                            <p class="skill-description">rozwój aplikacji backendowych oraz średnio zaawansowany game developing.</p>
+                            <!--<p class="skill-description">rozwój aplikacji backendowych oraz średnio zaawansowany game developing.</p>-->
                             <div class="skill-bar-container">
                                 <div class="skill-bar">
                                     <div class="skill-progress intermediate"></div>
@@ -741,7 +767,7 @@
                                     <div class="skill-level">ekspert</div>
                                 </div>
                             </div>
-                            <p class="skill-description">aplikacji backendowe, analiza danych i automatyzacja procesów.</p>
+                            <!--<p class="skill-description">aplikacje backendowe, analiza danych i automatyzacja procesów.</p>-->
                             <div class="skill-bar-container">
                                 <div class="skill-bar">
                                     <div class="skill-progress expert"></div>
@@ -759,7 +785,7 @@
                                     <div class="skill-level">zaawansowany</div>
                                 </div>
                             </div>
-                            <p class="skill-description">tworzenie semantycznego i dostępnego kodu html zgodnego ze standardami w3c.</p>
+                            <!--<p class="skill-description">tworzenie semantycznego i dostępnego kodu html zgodnego ze standardami w3c.</p>-->
                             <div class="skill-bar-container">
                                 <div class="skill-bar">
                                     <div class="skill-progress advanced"></div>
@@ -777,7 +803,7 @@
                                     <div class="skill-level">ekspert</div>
                                 </div>
                             </div>
-                            <p class="skill-description">stylowanie responsywnych interfejsów użytkownika i aplikacji webowych</p>
+                            <!--<p class="skill-description">stylowanie responsywnych interfejsów użytkownika i aplikacji webowych</p>-->
                             <div class="skill-bar-container">
                                 <div class="skill-bar">
                                     <div class="skill-progress expert"></div>
@@ -795,10 +821,100 @@
                                     <div class="skill-level">średnio zaawansowany</div>
                                 </div>
                             </div>
-                            <p class="skill-description">projektowanie i optymalizacja baz danych, podłączenia baz danych do aplikacji</p>
+                            <!--<p class="skill-description">projektowanie i optymalizacja baz danych, podłączenia baz danych do aplikacji</p>-->
                             <div class="skill-bar-container">
                                 <div class="skill-bar">
                                     <div class="skill-progress intermediate"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-golang"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <div class="skill-name">golang</div>
+                                    <div class="skill-level">początkujący</div>
+                                </div>
+                            </div>
+                            <!--<p class="skill-description">projektowanie i optymalizacja baz danych, podłączenia baz danych do aplikacji</p>-->
+                            <div class="skill-bar-container">
+                                <div class="skill-bar">
+                                    <div class="skill-progress beginner"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <div class="skill-name">react.js</div>
+                                    <div class="skill-level">początkujący</div>
+                                </div>
+                            </div>
+                            <!--<p class="skill-description">projektowanie i optymalizacja baz danych, podłączenia baz danych do aplikacji</p>-->
+                            <div class="skill-bar-container">
+                                <div class="skill-bar">
+                                    <div class="skill-progress beginner"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-php"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <div class="skill-name">php</div>
+                                    <div class="skill-level">średnio zaawansowany</div>
+                                </div>
+                            </div>
+                            <!--<p class="skill-description">projektowanie i optymalizacja baz danych, podłączenia baz danych do aplikacji</p>-->
+                            <div class="skill-bar-container">
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-windows"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <div class="skill-name">windows</div>
+                                    <div class="skill-level">ekspert</div>
+                                </div>
+                            </div>
+                            <!--<p class="skill-description">projektowanie i optymalizacja baz danych, podłączenia baz danych do aplikacji</p>-->
+                            <div class="skill-bar-container">
+                                <div class="skill-bar">
+                                    <div class="skill-progress expert"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fab fa-linux"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <div class="skill-name">linux</div>
+                                    <div class="skill-level">zaawansowany</div>
+                                </div>
+                            </div>
+                            <!--<p class="skill-description">projektowanie i optymalizacja baz danych, podłączenia baz danych do aplikacji</p>-->
+                            <div class="skill-bar-container">
+                                <div class="skill-bar">
+                                    <div class="skill-progress advanced"></div>
                                 </div>
                             </div>
                         </div>
@@ -834,20 +950,52 @@
 
                         <div class="project-card">
                             <div class="project-image">
-                                <i class="fas fa-question"></i>
+                                <i class="fas fa-server"></i>
                             </div>
                             <div class="project-content">
-                                <h3 class="project-title">soon . . .</h3>
-                                <p class="project-description">:P</p>
+                                <h3 class="project-title">777host</h3>
+                                <p class="project-description">host zdjęć, filmów, czy innych multimediów użytkowników w chmurze.</p>
                                 <div class="project-tech">
-                                    <span class="tech-tag">?</span>
-                                    <span class="tech-tag">?</span>
-                                    <span class="tech-tag">?</span>
+                                    <span class="tech-tag">html</span>
+                                    <span class="tech-tag">css</span>
+                                    <span class="tech-tag">c#</span>
+                                    <span class="tech-tag">php</span>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="project-card">
+                            <div class="project-image">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">livewin</h3>
+                                <p class="project-description">portal internetowy z poziomu którego można zakupić wspomagacze do bukmachera, np. analizy sportowe.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">html</span>
+                                    <span class="tech-tag">css</span>
+                                    <span class="tech-tag">js</span>
+                                    <span class="tech-tag">php</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <div class="project-image">
+                                <i class="fas fa-face-laugh-beam"></i>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">777fun</h3>
+                                <p class="project-description">portal internetowy rozrywkowy, na którym można zagrać w codziennie odświeżające się gry internetowe</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">react.js</span>
+                                    <span class="tech-tag">js</span>
+                                    <span class="tech-tag">c#</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--<div class="project-card">
                             <div class="project-image">
                                 <i class="fas fa-question"></i>
                             </div>
@@ -860,37 +1008,7 @@
                                     <span class="tech-tag">?</span>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-question"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">soon . . .</h3>
-                                <p class="project-description">:P</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">?</span>
-                                    <span class="tech-tag">?</span>
-                                    <span class="tech-tag">?</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-image">
-                                <i class="fas fa-question"></i>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">soon . . .</h3>
-                                <p class="project-description">:P</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">?</span>
-                                    <span class="tech-tag">?</span>
-                                    <span class="tech-tag">?</span>
-                                </div>
-                            </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </section>
@@ -923,6 +1041,16 @@
                                 <p>@prncplk</p>
                             </div>
                         </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>twitter</h3>
+                                <p>@pryncypalka777</p>
+                            </div>
+                        </div>
                         
                         <div class="contact-card">
                             <div class="contact-icon">
@@ -950,25 +1078,25 @@
                         <form id="contactForm">
                             <div class="form-group">
                                 <label for="name" class="form-label">imię / nick</label>
-                                <input type="text" id="name" class="form-input" required>
+                                <input type="text" id="name" class="form-input" required disabled>
                             </div>
                             
                             <div class="form-group">
                                 <label for="email" class="form-label">email</label>
-                                <input type="email" id="email" class="form-input" required>
+                                <input type="email" id="email" class="form-input" required disabled>
                             </div>
                             
                             <div class="form-group">
                                 <label for="subject" class="form-label">temat</label>
-                                <input type="text" id="subject" class="form-input" required>
+                                <input type="text" id="subject" class="form-input" required disabled>
                             </div>
                             
                             <div class="form-group">
                                 <label for="message" class="form-label">wiadomość</label>
-                                <textarea id="message" class="form-textarea" required></textarea>
+                                <textarea id="message" class="form-textarea" required disabled></textarea>
                             </div>
                             
-                            <button type="submit" class="submit-btn">wyślij wiadomość</button>
+                            <button type="submit" class="submit-btn">wyślij wiadomość</button><h2 style="display: inline; padding-left: 16rem; user-select: none; cursor: default; color: var(--accent-blue)">formularz tymczasowo wyłączony!</h2>
                         </form>
                     </div>
                 </div>
