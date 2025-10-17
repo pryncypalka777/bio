@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👋 | @pryncypalka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            user-select: none;
+        }
+
+        .logo .logo-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .nav-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .nav-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            -webkit-user-drag: none;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-social {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-btn:hover {
+            background: rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        /* All sections full height and centered */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero {
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.15), transparent);
+            border-radius: 50%;
+            top: -200px;
+            right: -100px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-content {
+            z-index: 1;
+            user-select: none;
+        }
+
+        .hero h1 {
+            font-size: 4.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .wave {
+            display: inline-block;
+            animation: wave 1.5s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(20deg); }
+            75% { transform: rotate(-20deg); }
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            user-select: none;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .avatar {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 5px;
+            animation: pulse-border 2s ease-in-out infinite;
+            user-select: none;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(102, 126, 234, 0); }
+        }
+
+        .avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .tech-badge {
+            padding: 0.6rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            user-select: none;
+        }
+
+        .tech-badge:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Section Content Wrapper */
+        .section-wrapper {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        h2 .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #b0b0b0;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(102, 126, 234, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-card p {
+            color: #b0b0b0;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-tag {
+            font-size: 0.8rem;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 904px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: rgba(102, 126, 234, 0.4);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-card a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            word-break: break-all;
+        }
+
+        .contact-card a:hover {
+            color: #667eea;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #6b7280;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-center {
+                position: static;
+                transform: none;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            nav {
+                padding: 1.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .avatar {
+                width: 250px;
+                height: 250px;
+            }
+
+            .avatar-inner {
+                font-size: 5rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+        }
+
+        /* Ensure proper spacing for mobile */
+        @media (max-width: 768px) {
+            section {
+                min-height: auto;
+                padding: 4rem 0;
+            }
+
+            #hero {
+                min-height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="logo-highlight">pryncypalka</span>
+        </div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="#hero">Strona główna</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#projects">Projekty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="nav-social">
+            <a href="https://github.com/pryncypalka777" class="social-btn" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://guns.lol/pryncypalka" class="social-btn" target="_blank" title="guns.lol">
+                <i class="fas fa-gun"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Hej, jestem <span class="highlight">pryncypalka</span>!<span class="wave">👋</span></h1>
+                    <p class="subtitle">Backend Developer specjalizujący się w tworzeniu wydajnych aplikacji serwerowych. Pasjonat czystego kodu i nowoczesnych technologii.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">C#</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Rust</span>
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">SQL</span>
+                    </div>
+                    <a href="#contact" class="hero-cta">Skontaktuj się</a>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar">
+                        <div class="avatar-inner">
+                            🪐
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-wrapper">
+                <h2><span class="gradient-text">O mnie</span></h2>
+                <div class="about-content">
+                    <p>Jestem backend developerem specjalizującym się w tworzeniu wydajnych i skalowalnych aplikacji serwerowych. Posiadam szerokie doświadczenie w różnych technologiach, od klasycznego C# i PHP, przez nowoczesny Rust, aż po Python i JavaScript.</p>
+                    <p style="margin-top: 1.5rem;">Pasjonuję się architekturą systemów, optymalizacją baz danych oraz tworzeniem API. Zawsze staram się pisać czysty, testowalny kod zgodny z najlepszymi praktykami branżowymi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-wrapper">
+                <h2><span class="gradient-text">Projekty</span></h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>777host</h3>
+                        <p>Host zdjęć, filmów, czy innych multimediów użytkowników w chmurze. Robiony z myślą o wygodnym i wydajnym gospodarowaniu i zarządzaniu swoimi multimediami.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>LiveWin</h3>
+                        <p>Portal internetowy z poziomu którego można zakupić wszelkiego rodzaju wspomagacze do bukmachera realizowanych przez specjalistów, od analiz sportowych wydarzeń do gotowych kuponów z wysoką szansą wygranej.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>E-commerce Backend</h3>
+                        <p>Kompletny backend dla platformy e-commerce z systemem płatności, zarządzaniem magazynem i panelem administracyjnym. Bezpieczne API z wielopoziomową autoryzacją.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Rust</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-wrapper">
+                <h2><span class="gradient-text">Kontakt</span></h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>Email Osobisty</h3>
+                        <a href="mailto:business@pryncypalka.ovh">business@pryncypalka.ovh</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelopes-bulk"></i></div>
+                        <h3>Email Firmowy</h3>
+                        <a href="mailto:kontakt@777host.pl">kontakt@777host.pl</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-discord"></i></div>
+                        <h3>Discord</h3>
+                        <a href="#">@pryncypalka</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>made & powered by @pryncypalka<br><br>&copy; 2025 pryncypalka.ovh</p>
+    </footer>
+</body>
+</html>
